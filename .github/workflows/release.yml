@@ -11,9 +11,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [[self-hosted, hetzner-ci, clauditor-ci], macos-latest, windows-latest]
         include:
-          - os: ubuntu-latest
+          - os: [self-hosted, hetzner-ci, clauditor-ci]
             target: x86_64-unknown-linux-gnu
             archive_name: clauditor-linux-amd64.tar.gz
           - os: macos-latest
